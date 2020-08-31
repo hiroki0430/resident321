@@ -1,0 +1,456 @@
+@charset "UTF-8";
+
+.pace-running #loader-wrapper{
+    opacity: 0;
+}
+
+　html {
+    margin: 0;
+    padding:0;
+  }
+ 
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+    font-weight: 500;
+    color: #333;
+    line-height: 2.0;
+    letter-spacing: 0.1em;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+   }
+  
+  h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  ul,li,dl,dt,dd {
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+  
+  a { 
+    text-decoration: none; 
+    transition: all .6s ease;
+  }
+  
+  a:hover { 
+    transition: all .6s ease;
+  }
+  
+  .content-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+
+  /* ヘッダー */
+  header{
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+  }
+
+  header ul{
+      display: flex;   
+  }
+
+  header ul li{
+      padding: 20px;
+  }
+  header ul li a{
+      color: #333;
+      padding: 20px;
+  }
+  header ul li a:hover{
+      border: 1px solid black;
+      background-color: black;
+      color: blanchedalmond;
+      transition: all 1s ease;
+  }
+
+  /* チェックボックスは非表示に */
+  .drawer-hidden {
+    display: none;
+  }
+
+  .drawer-content{
+      display: none;
+  }
+
+
+@media screen and (max-width:1000px){
+    header nav{
+        display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+  .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上に */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer-open span,
+  .drawer-open span:before,
+  .drawer-open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線のうち一番上の棒の位置調整 */
+  .drawer-open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線のうち一番下の棒の位置調整 */
+  .drawer-open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .drawer-content {
+      display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+  
+  .drawer-list{
+      flex-direction: column;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+    left: 0;/* メニューを画面に入れる */
+  }
+
+}
+ 
+
+  .mainvisual{
+      position: relative;
+  }
+
+  .mainvisual img{
+      height: 600px;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);	
+  }
+
+  .mainvisual .visual-message{
+      height: 200px;
+      width: 500px;
+      background-color: white;
+      position: absolute;
+      top: 40%;
+      left: 60%;
+      opacity: 0.7;
+      line-height: 90px;
+      text-align: center;
+      font-size: 20px;
+  }
+
+  .news{
+      padding: 120px;
+  }
+
+  .news .content-wrapper{
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .news h2{
+      font-size: 2rem;
+  }
+  .news .content th{
+      padding: 20px 30px 20px 0;
+      border-bottom: 1px solid black;
+  }
+  .news .content td{
+      border-bottom: 1px solid black;
+  }
+  .news .btn{
+      text-align: center;
+      margin-top: 50px;
+  }
+  .news .btn a{
+      padding: 20px 40px;
+      border: 1px solid black;
+      color: black;
+  }
+  .news .btn a:hover{
+    background-color: black;
+    color: blanchedalmond;
+    transition: all 1s ease;
+  }
+
+
+.infor{
+    position: relative;
+}
+.infor::after{
+  content: "";
+  background-color: #f3f3f3;
+  height: 150%;
+  width: 40%;
+  position: absolute;
+  top: 70%;
+  left: 44%;
+  transform-origin: left top;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.infor .room-infor{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    background-color: #fff;
+    opacity: 0.7;
+    width: 650px;
+    height: 200px;
+    text-align: center;
+}
+.infor .room-infor h2{
+    font-size: 2rem;
+}
+.infor .room-infor .text{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.infor .room-infor a{
+    color: black;
+    padding: 20px 40px;
+    border: 1px solid black;
+}
+.infor .room-infor a:hover{
+    background-color: black;
+    color: blanchedalmond;
+    transition: all 1s ease;
+}
+.infor img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+.recomend h2{
+    text-align: center;
+    margin: 100px 0;
+    font-size: 2rem;
+}
+.recomend .recomend-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recomend .recomend-pic1 img{
+    object-fit: cover;
+}
+
+.recomend .recomend-pic1{
+    width: 45%;
+}
+
+.recomend .recomend-pic1 P{
+   color: black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.recomend .recomend-pic1 p a{
+    padding: 20px 40px;
+    border: 1px solid black;
+    color: black;
+    background-color: #fff;
+}
+.recomend .recomend-pic1 p a:hover{
+    color: #fff;
+    background-color: black;
+    transition: all 1s ease;
+}
+
+.contact{
+    margin-top: 100px;
+    position: relative;
+}
+.contact img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.contact .contact-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    
+}
+.contact .contact-btn a{
+    color: black;
+    padding: 20px 70px;
+    background-color: #fff;
+    font-size: 1.5rem;
+}
+.contact .contact-btn a:hover{
+    background-color: black;
+    color: #fff;
+    transition: all 1s ease;
+
+}
+
+footer{
+    margin-top: 150px;
+}
+
+footer ul{
+    display: flex;
+    margin-bottom: 25px;
+}
+footer ul li{
+    padding-top: 10px;
+}
+footer ul li a{
+    padding-right: 40px;
+    color: black;  
+}
+footer ul li a:hover{
+    opacity: 0.3;   
+}
+footer .address{
+    margin-bottom: 45px;
+}
+footer .last{
+    text-align: center;
+}
+
+
+/* タブレット */
+
+@media screen and (max-width:900px){
+    .mainvisual .visual-message{
+        display: none;
+    }
+
+    .news .content-wrapper{
+        /* flex-direction: column; */
+        display: block;
+    }
+    .news .heading h2{
+        margin-bottom: 30px;
+    }
+    .news .content{
+        width: 100%;
+    }
+    .infor .room-infor{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+    .recomend-wrapper{
+        flex-direction: column;
+    }
+    .recomend-wrapper .recomend-pic1{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+
+
+}
+
+/* スマホ */
+@media screen and (max-width:634px){
+.news .content th{
+    display: block;
+    width: 100%;
+        
+}
+.news h2{
+    text-align: center;
+}
+.news .content td{
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+}
+.news{
+    padding: 60px;
+}
+.infor .room-infor .text{
+    font-size: 1rem;
+}
+.contact-btn{
+    width: 100%;
+}
+.contact-btn p{
+    text-align: center;
+}
+}
