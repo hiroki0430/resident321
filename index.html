@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mitsui Residence</title>
-    <link rel="icon" type="image/x-icon" href="images/icon.png">
-    <link rel="stylesheet" href="sanitize.css" />
-    <link rel="stylesheet" href="day2.css" />
-    <link rel="stylesheet" href="loader.css">
-    <script src="./pace.js"></script>
-  </head>
-  <body>
-    <div id="loader-wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitsui Residence</title>
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+  <link rel="stylesheet" href="css/sanitize.css" />
+  <link rel="stylesheet" href="css/day2.css" />
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <script src="./pace.js"></script>
+</head>
+<body>
+  <div id="loader-wrapper">
     <header>
       <h1>〇〇レジデンス</h1>
 
       <!-- ハンバーガーメニュー部分 -->
-    <div class="drawer">
-  
-      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-      <input type="checkbox" id="drawer-check" class="drawer-hidden" >
-  
-      <!-- ハンバーガーアイコン -->
-      <label for="drawer-check" class="drawer-open"><span></span></label>
-  
-      <!-- メニュー -->
-      <nav class="drawer-content">
-        <ul class="drawer-list">
-          <li class="drawer-item">
-            <a href="">ブランドを知る</a>
-          </li><!-- /.drawer-item -->
-          <li class="drawer-item">
-            <a href="">購入後のサービス</a>
-          </li><!-- /.drawer-item -->
-          <li class="drawer-item">
-            <a href="">住まいのガイド</a>
-          </li><!-- /.drawer-item -->
-          <li class="drawer-item">
-            <a href="">アクセス</a>
-          </li><!-- /.drawer-item -->
-        </ul><!-- /.drawer-list -->
-      </nav>
-  
-    </div>
+      <div class="drawer">
+
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer-check" class="drawer-open"><span></span></label>
+
+        <!-- メニュー -->
+        <nav class="drawer-content">
+          <ul class="drawer-list">
+            <li class="drawer-item">
+              <a href="">ブランドを知る</a>
+            </li><!-- /.drawer-item -->
+            <li class="drawer-item">
+              <a href="">購入後のサービス</a>
+            </li><!-- /.drawer-item -->
+            <li class="drawer-item">
+              <a href="">住まいのガイド</a>
+            </li><!-- /.drawer-item -->
+            <li class="drawer-item">
+              <a href="">アクセス</a>
+            </li><!-- /.drawer-item -->
+          </ul><!-- /.drawer-list -->
+        </nav>
+
+      </div>
 
       <nav>
         <ul>
@@ -119,6 +121,22 @@
           </div>
         </div>
       </article>
+
+      <article class="photo">
+        <div class="content-wrapper">
+          <h2>フォトギャラリー</h2>
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/room5.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="images/room6.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="images/room7.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
       <article class="contact">
         <img src="images/room4.jpg" alt="" />
         <div class="content-wrapper">
@@ -130,12 +148,12 @@
     </main>
     <footer>
       <div class="content-wrapper">
-          <h2>〇〇レジデンス</h2>
-          <ul>
-            <li><a href="#">アクセス</a></li>
-            <li><a href="#">施設一覧</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-          </ul>
+        <h2>〇〇レジデンス</h2>
+        <ul>
+          <li><a href="#">アクセス</a></li>
+          <li><a href="#">施設一覧</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
         <hr />
         <div class="address">
           <p>
@@ -147,5 +165,7 @@
       </div>
     </footer>
   </div>
-  </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
