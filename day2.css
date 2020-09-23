@@ -430,6 +430,9 @@ footer .address{
 footer .last{
     text-align: center;
 }
+footer h2{
+  font-family: 'Ranchers', cursive;
+}
 
 
 /* タブレット */
